@@ -1,0 +1,20 @@
+path: "TestDrums"
+use_subfolders: true
+note_range:
+  first_note: 46
+  last_note: 69
+mappings:
+  - note_number: 46
+    file_name_regex: "_BD"
+  - note_number: 48
+    file_name_regex: "_SN"
+  - note_number: 54
+    file_name_regex: "_HH"
+  - note_number: 51
+    file_name_regex: "_CP"
+  - note_number: 56
+    file_name_regex: "_OH"
+  - note_number: 59
+    file_name_regex: "_RD"
+  - note_number: 61
+    file_name_regex: "_CR"
