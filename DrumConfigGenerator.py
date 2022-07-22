@@ -70,6 +70,8 @@ class SubConfigGenerator:
         self.file_dict : Dict[str, self.File] = self.__get_files(path, self.notes_regex)
 
     def __assign_note(self, note: int, file: SubConfigGenerator.File):
+        if self.notes[note] is self.File:
+            self.file_dict[self.notes[note].path] = self.notes[note]
         self.notes[note] = file
         del(self.file_dict[file.path])
         files = self.__get_files_by_regex(file.regex)
@@ -131,6 +133,8 @@ class SubConfigGenerator:
     def __write_drum_config(self) -> None:
         mappings: List = self.drum_config["mappings"]
         for note in self.notes:
+            if self.notes[note] is None:
+                continue
             mapping = {}
             mapping["note_number"] = note
             mapping["file_name"] = self.notes[note].path
@@ -154,6 +158,9 @@ class SubConfigGenerator:
         self.__assign_unused_files()
 
         self.__write_drum_config()
+
+    def get_unused_files(self) -> List[str]:
+        return [file.path for file in self.file_dict.values()]
  
 
 class DrumConfigGenerator:
@@ -179,10 +186,11 @@ class DrumConfigGenerator:
         for dir in self.subfolders:
             scg = SubConfigGenerator(dir, self.config)
             scg.gen_drum_config()
+            self.unused_files[dir] = scg.get_unused_files()
 
     def __init__(self) -> None:
         self.config = self.__read_config()
-
+        self.unused_files: Dict[str, List[str]] = {}
 
         self.path = self.config["path"]
         self.use_subfolders = bool(self.config["use_subfolders"])
@@ -195,7 +203,12 @@ class DrumConfigGenerator:
         if len(self.subfolders) == 0:
             return
 
+    def write_unused_files(self) -> None:
+        with open(os.path.join(self.path, "unuesd_files.yaml"), "w") as file:
+            yaml.dump(self.unused_files, file)
+
 
 if __name__ == "__main__":
     dcg = DrumConfigGenerator()
     dcg.gen_drum_config()
+    dcg.write_unused_files()
