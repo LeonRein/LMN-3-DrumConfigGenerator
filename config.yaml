@@ -5,7 +5,7 @@
 #   - if true, multiple drum kits in subfolders are expected
 #   - if false, only one drum kit in the specified path is expected
 # note_range: 
-#   - which notes are populated with remaining files, which are not specified in the mapping
+#   - notes in this range are populated with remaining files, which were not used in the mapping
 # mappings: 
 #   - mapping for each note to a specific file
 #   note_number: 
