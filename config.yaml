@@ -1,3 +1,20 @@
+### LMN-3 DrumConfigGenerator Configuration ###
+# path: 
+#   - path to the drum kits
+# use_subfolders: 
+#   - if true, multiple drum kits in subfolders are expected
+#   - if false, only one drum kit in the specified path is expected
+# note_range: 
+#   - which notes are populated with remaining files, which are not specified in the mapping
+# mappings: 
+#   - mapping for each note to a specific file
+#   note_number: 
+#     - number of the note
+#   file_name_regex: 
+#     - if the regex is found somewhere in a file name, the corresponding file is mapped to that note
+#     - if multiple files are matching the given regex, the alphabetically first file is used. The remaining files, which matched the regex, are mapped to the following notes.
+### 
+
 path: "DrumKits"
 use_subfolders: true
 note_range:
