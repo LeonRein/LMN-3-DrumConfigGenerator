@@ -99,3 +99,6 @@ mappings:
   note_number: 69
 name: '606'
 ```
+
+## TODO
+- works only with wav files
