@@ -49,7 +49,7 @@ class SubConfigGenerator:
     def __init_notes(cls, config: Dict) -> Dict[int, str]:
         notes = {}
         note_range = config["note_range"]
-        for note in range(int(note_range["first_note"]), int(note_range["last_note"])):
+        for note in range(int(note_range["first_note"]), int(note_range["last_note"])+1):
             notes[note] = None
 
         return notes

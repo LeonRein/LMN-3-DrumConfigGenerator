@@ -34,22 +34,22 @@ The script can be configured through the config.yaml file:
 path: "DrumKits"
 use_subfolders: true
 note_range:
-  first_note: 46
-  last_note: 69
+  first_note: 53
+  last_note: 76
 mappings:
-  - note_number: 46
+  - note_number: 53
     file_name_regex: "_BD"
-  - note_number: 48
+  - note_number: 55
     file_name_regex: "_SN"
-  - note_number: 54
-    file_name_regex: "_HH"
-  - note_number: 51
-    file_name_regex: "_CP"
-  - note_number: 56
-    file_name_regex: "_OH"
-  - note_number: 59
-    file_name_regex: "_RD"
   - note_number: 61
+    file_name_regex: "_HH"
+  - note_number: 58
+    file_name_regex: "_CP"
+  - note_number: 63
+    file_name_regex: "_OH"
+  - note_number: 66
+    file_name_regex: "_RD"
+  - note_number: 68
     file_name_regex: "_CR"
 ```
 
@@ -70,32 +70,32 @@ will generate the drum kit configuration file "606.yaml" in the corresponding fo
 ```YAML
 mappings:
 - file_name: 606_BD_01.wav
-  note_number: 46
-- file_name: 606_BD_02.wav
-  note_number: 47
-- file_name: 606_SN_01.wav
-  note_number: 48
-- file_name: 606_SN_02.wav
-  note_number: 49
-- file_name: 606_HT_01.wav
-  note_number: 50
-- file_name: 606_LT_01.wav
-  note_number: 51
-- file_name: 606_LT_02-001.wav
-  note_number: 52
-- file_name: 606_LT_02-002.wav
   note_number: 53
-- file_name: 606_HH_01.wav
+- file_name: 606_BD_02.wav
   note_number: 54
-- file_name: 606_HH_02.wav
+- file_name: 606_SN_01.wav
   note_number: 55
-- file_name: 606_OH_01.wav
+- file_name: 606_SN_02.wav
   note_number: 56
-- file_name: 606_OH_02.wav
+- file_name: 606_HT_01.wav
   note_number: 57
-- file_name: 606_CR_01.wav
+- file_name: 606_LT_01.wav
+  note_number: 58
+- file_name: 606_LT_02-001.wav
+  note_number: 59
+- file_name: 606_LT_02-002.wav
+  note_number: 60
+- file_name: 606_HH_01.wav
   note_number: 61
-- file_name: 606_CR_02.wav
+- file_name: 606_HH_02.wav
   note_number: 62
+- file_name: 606_OH_01.wav
+  note_number: 63
+- file_name: 606_OH_02.wav
+  note_number: 64
+- file_name: 606_CR_01.wav
+  note_number: 68
+- file_name: 606_CR_02.wav
+  note_number: 69
 name: '606'
 ```

@@ -18,20 +18,20 @@
 path: "DrumKits"
 use_subfolders: true
 note_range:
-  first_note: 46
-  last_note: 69
+  first_note: 53
+  last_note: 76
 mappings:
-  - note_number: 46
+  - note_number: 53
     file_name_regex: "_BD"
-  - note_number: 48
+  - note_number: 55
     file_name_regex: "_SN"
-  - note_number: 54
-    file_name_regex: "_HH"
-  - note_number: 51
-    file_name_regex: "_CP"
-  - note_number: 56
-    file_name_regex: "_OH"
-  - note_number: 59
-    file_name_regex: "_RD"
   - note_number: 61
+    file_name_regex: "_HH"
+  - note_number: 58
+    file_name_regex: "_CP"
+  - note_number: 63
+    file_name_regex: "_OH"
+  - note_number: 66
+    file_name_regex: "_RD"
+  - note_number: 68
     file_name_regex: "_CR"
